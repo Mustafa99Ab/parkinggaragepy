@@ -23,3 +23,5 @@ The communication between the main board and the other components happens throug
 
 ## API Usage
 Take some minutes to understand, in broad terms, how the API works. If you do not fully understand the API, do not worry because further details will be given in the user stories (see the _Issues_ session).
+
+DONE 
