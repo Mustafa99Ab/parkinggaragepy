@@ -91,17 +91,15 @@ class ParkingGarage:
         self.door_open = False
 
     def turn_on_red_light(self) -> None:
-        GPIO.output(self.LED_PIN, True)
+        GPIO.output(self.LED_PIN, GPIO.HIGH)
         self.red_light_on = True
 
     def turn_off_red_light(self) -> None:
-        GPIO.output(self.LED_PIN, False)
+        GPIO.output(self.LED_PIN, GPIO.LOW)
         self.red_light_on = False
 
     def manage_red_light(self) -> None:
-        occupied_spots = self.get_number_occupied_spots()
-
-        if occupied_spots >= 3:
+        if self.get_number_occupied_spots() >= 3:
             self.turn_on_red_light()
         else:
             self.turn_off_red_light()
